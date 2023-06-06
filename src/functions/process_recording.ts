@@ -76,7 +76,7 @@ export const handler: ServerlessFunctionSignature<MyContext, MyEvent> =
         encodeURIComponent(
           JSON.stringify([
             {
-              channel: 2,
+              channel: 1,
               type: "agent",
             },
           ])
@@ -89,12 +89,12 @@ export const handler: ServerlessFunctionSignature<MyContext, MyEvent> =
           RecordingSid: event.RecordingSid,
           Participants: JSON.stringify([
             {
-              channel: 2,
-              type: "customer",
-            },
-            {
               channel: 1,
               type: "agent",
+            },
+            {
+              channel: 2,
+              type: "customer",
             },
           ]),
         },
